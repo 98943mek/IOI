@@ -1,0 +1,200 @@
+Case 1: 32
+Case 2: invalid data
+Case 3: 12
+Case 4: 15
+Case 5: 0
+Case 6: 11
+Case 7: 27
+Case 8: invalid data
+Case 9: 14
+Case 10: 7
+Case 11: 17
+Case 12: 11
+Case 13: 3
+Case 14: invalid data
+Case 15: 25
+Case 16: 44
+Case 17: 15
+Case 18: 17
+Case 19: 25
+Case 20: invalid data
+Case 21: 42
+Case 22: 36
+Case 23: 19
+Case 24: 26
+Case 25: 26
+Case 26: invalid data
+Case 27: 32
+Case 28: 30
+Case 29: 1
+Case 30: 0
+Case 31: 19
+Case 32: invalid data
+Case 33: 31
+Case 34: 0
+Case 35: 19
+Case 36: 10
+Case 37: 10
+Case 38: 22
+Case 39: 11
+Case 40: 29
+Case 41: 19
+Case 42: 23
+Case 43: 21
+Case 44: invalid data
+Case 45: 38
+Case 46: 20
+Case 47: 0
+Case 48: 16
+Case 49: 15
+Case 50: invalid data
+Case 51: 29
+Case 52: 0
+Case 53: 33
+Case 54: 0
+Case 55: 29
+Case 56: invalid data
+Case 57: 24
+Case 58: 34
+Case 59: 0
+Case 60: 23
+Case 61: 0
+Case 62: invalid data
+Case 63: 8
+Case 64: 40
+Case 65: 33
+Case 66: 29
+Case 67: 23
+Case 68: 0
+Case 69: 40
+Case 70: 42
+Case 71: 19
+Case 72: 32
+Case 73: 12
+Case 74: invalid data
+Case 75: 42
+Case 76: 11
+Case 77: 28
+Case 78: 5
+Case 79: 26
+Case 80: invalid data
+Case 81: 14
+Case 82: 19
+Case 83: 19
+Case 84: 18
+Case 85: 25
+Case 86: 23
+Case 87: 9
+Case 88: 8
+Case 89: 22
+Case 90: 0
+Case 91: 0
+Case 92: invalid data
+Case 93: 27
+Case 94: 34
+Case 95: 35
+Case 96: 0
+Case 97: 0
+Case 98: invalid data
+Case 99: 29
+Case 100: 36
+Case 101: 9
+Case 102: 31
+Case 103: 35
+Case 104: invalid data
+Case 105: 30
+Case 106: 12
+Case 107: 0
+Case 108: 23
+Case 109: 22
+Case 110: invalid data
+Case 111: 26
+Case 112: 0
+Case 113: 27
+Case 114: 11
+Case 115: 28
+Case 116: invalid data
+Case 117: 8
+Case 118: 35
+Case 119: 22
+Case 120: 16
+Case 121: 25
+Case 122: invalid data
+Case 123: 33
+Case 124: 10
+Case 125: 31
+Case 126: 18
+Case 127: 33
+Case 128: invalid data
+Case 129: 3
+Case 130: 0
+Case 131: 5
+Case 132: 38
+Case 133: 0
+Case 134: invalid data
+Case 135: 16
+Case 136: 16
+Case 137: 17
+Case 138: 17
+Case 139: 0
+Case 140: invalid data
+Case 141: 19
+Case 142: 0
+Case 143: 33
+Case 144: 23
+Case 145: 28
+Case 146: invalid data
+Case 147: 19
+Case 148: 39
+Case 149: 37
+Case 150: 19
+Case 151: 5
+Case 152: 0
+Case 153: 19
+Case 154: 29
+Case 155: 21
+Case 156: 6
+Case 157: 20
+Case 158: invalid data
+Case 159: 10
+Case 160: 12
+Case 161: 9
+Case 162: 14
+Case 163: 14
+Case 164: invalid data
+Case 165: 25
+Case 166: 28
+Case 167: 39
+Case 168: 12
+Case 169: 23
+Case 170: invalid data
+Case 171: 22
+Case 172: 19
+Case 173: 38
+Case 174: 47
+Case 175: 14
+Case 176: invalid data
+Case 177: 19
+Case 178: 8
+Case 179: 12
+Case 180: 37
+Case 181: 40
+Case 182: invalid data
+Case 183: 25
+Case 184: 31
+Case 185: 0
+Case 186: 9
+Case 187: 0
+Case 188: invalid data
+Case 189: 18
+Case 190: 27
+Case 191: 11
+Case 192: 0
+Case 193: 8
+Case 194: invalid data
+Case 195: 27
+Case 196: 13
+Case 197: 0
+Case 198: 16
+Case 199: 30
+Case 200: invalid data

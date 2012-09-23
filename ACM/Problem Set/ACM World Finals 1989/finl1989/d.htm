@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Running Lights Visibility Calculator</TITLE>
+<META NAME="description" CONTENT="Running Lights Visibility Calculator">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="htmlatex.css">
+</HEAD>
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+<CENTER>
+<H5>ACM International Collegiate
+Programming Contest Finals 1989</H5>
+<P>
+<P>
+<H1>Problem D</H1>
+</CENTER>
+ <H1><BR CLEAR=ALL><CENTER><TABLE BGCOLOR=#0060F0><TR><TD><B><FONT SIZE=5 COLOR=#C0FFFF>&nbsp;<A NAME="SECTION0001000000000000000000">Running Lights Visibility Calculator</A></FONT>&nbsp;</B></TABLE></CENTER></H1>
+<P>
+Ships underway on the high seas at night are required to display navigation
+lights to identify their location and
+direction of movement to other ships.  Most ships we required to display a
+set of four running lights: one at the
+stern (rear), one in the middle on the mast, and two at the bow (front).
+<P>
+
+<!-- FIXED: changed image and description -->
+<center><img ALT="ship lights sketch" src=d2.gif></center>
+
+<P>
+In naval practice, the course of a ship is the direction the ship is
+traveling as measured <I>clockwise</I> from true north.  For
+example, a ship that is traveling due east is on a 90
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >
+ course; one traveling
+<!-- FIXED: changed image and description -->
+on a 315 <IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >
+ course is traveling due west-northwest. The relative bearing
+from ship <I>A</I> to ship <I>B</I> is the measure of the angle that
+the course of ship <I>A</I> makes
+with the vector drawn from <I>A</I> to <I>B</I>, where the initial side
+of that angle is incident with the course vector and the
+terminal side is incident with the vector from <I>A</I> to <I>B</I>.
+Thee measurement is taken clockwise.
+<P>
+<P>
+If we assume that the bow of a ship is pointing to 0.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >
+or 360.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  > ,
+then the running lights have ranges as shown in the
+figure. Here, the stern (rear) of the ship is at 180.0
+<!-- FIXED: changed image and description -->
+ <IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  > .
+ The masthead light
+shines all directions (0.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >  - 360.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  > ). The
+stern light shines strictly between 110.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >  and 250.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >
+(the angle at which the stern light is beamed relative to the ship
+satisfies the inequalities  
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=181 HEIGHT=25 ALIGN=MIDDLE ALT="110.0~ &lt; angle &lt; 250.0~" SRC="d3.gif"  > ).
+The red running light shines strictly between 245.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >  and 2.5
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  > ; the
+green running light shines strictly between 357.5 
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >  and 115.0
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  > . (Note the
+overlap in the visible sectors between the
+red and green running lights and stern light.
+<!-- FIXED: added following important note -->
+If both red and green lights are visible, the masthead light
+is positioned between them. Also, if the masthead light is exactly above
+the stern light, assume the stern is more on the left then.
+)
+ In adition, the nominal
+maximum light visibility range for all lights is
+10 nautical miles (<EM>nm</EM>).
+<!-- FIXED: added following quite important note -->
+Assume that ship is infinitely small compared to nautical mile.
+<P>
+<P>
+Write a computer program that will repeatedly read in sets of data
+describing the location, course and speed of your
+own ship and other ships in the vicinity.  Based on this information,
+the program will first calculate the relative
+bearings from other ships to your ship and display the expected
+configurations of visible lights from left to right as
+viewed from your own ship. Ships at least 10 nm away will not be visible.
+<P>
+The program then recalculates the relative
+bearings after a 3 minute time delay to determine which ships are on a
+collision course with your own.  If another
+ship is initially visible and if at the end of the 3 minute delay the
+relative bearing from that ship to your own remains
+almost the same (with 2
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=5 HEIGHT=6 ALIGN=BOTTOM ALT="degrees" SRC="d1.gif"  >
+<!-- FIXED: added following clarification --> delta at most)
+while the distance between the ships decreases,
+then the program must issue a collision
+warning. Assume that there will be no collisions of any type
+(ship-to-ship or ship-to-land) in the 3 minute time period.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">Input</A></FONT></H2>
+<P>
+The input file consists of several data scenarios.
+ Each scenario is as follows.
+<P>
+<!-- FIXED: added limits to different values -->
+<PRE><TT> 
+          Scenario ID (string -> max 50 characters)
+          Number of other ships (integer -> less than 4000)
+<P>
+          Information on your own ship on two lines:
+                name of your ship (string -> max 25 characters)
+                <I>x</I>-coordinate <I>y</I>-coordinate course speed (reals)
+<P>
+          Other ship information on two lines per ship:
+                name of other ship (string -> max 25 characters)
+                <I>x</I>-coordinate <I>y</I>-coordinate course speed (reals)
+<P>
+</TT></PRE>
+<P>
+All coordinates are on a cartesian grid with unit measurement of 1 nautical
+mile.  Courses are measured from true
+north, and each course satisfies  
+<!-- FIXED: changed image and description -->
+<IMG WIDTH=172 HEIGHT=25 ALIGN=MIDDLE ALT="0.0~ &lt;= course &lt; 360.0~" SRC="d4.gif"  > .
+Speeds are in knots (<EM>1 knot = 1 nm/hr</EM>).  The end of input is
+indicated by end-of-file.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">Output</A></FONT></H2>
+<!-- FIXED: added accuracy note -->
+<P>
+Beware of the floating point inaccuracies. Use doubles to hold the floating
+point values, not the float type. Use predeclared constant <I>PI</I> for
+converting angles from degrees to radians and back. Use degrees only for
+input and output, compute and store the angle data directly in radians.
+Use function atan2() for angle extraction. Don't apply more operators on
+real value than <B>absolutely</B> neccesary to compute the result.
+<P>
+<!-- FIXED: table heading description -->
+Output consists of a single table per data set. There's first header,
+with string "Scenario: " followed by the name of current scenario. Then
+follows empty line and column headings (the column widths are 26, 8,
+9 and 22 characters, see example). 65 dashes (-) divides headings
+from the table. A table shows the ID for each
+other ship along with its initially
+calculated relative bearing to your own ship, distance from your own ship,
+and its light configurations (from left to
+right) visible from your ship.
+The light names are "Masthead", "Stern",
+"Green" and "Red". Write "Lights not visible" if the ship is too far.
+<!-- FIXED: changed output format into rigid one. Following note removed:
+  Specific table spacing is not critical but
+output should be easily readable.  -->
+Collision
+warnings, if any, should appear at the bottom of the table.  Each warning
+should include string "** Collision warning --&gt; ", the name of the other
+ship and its distance from your own ship at the end of the 3 minute interval.
+(Do not display the relative bearings,
+distances, or running lights configurations for the end of that warning
+interval.)
+<!-- FIXED: added order of warnings -->
+The warnings should be ordered by the index of the other ship in input set.
+<P>
+All real output should be written
+with two digits to the right of the decimal.  Separate output for different
+<!-- FIXED: added number of asterisk -->
+scenarios with a line of 65 asterisks.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">Sample Input</A></FONT></H2>
+<P>
+<PRE>Sample Test Data Set
+4
+Ownship
+0.0 0.0 90.0 10.0
+Windswept
+10.0 10.0 135.0 8.0
+Footloose
+-5.0 6.0 275.0 6.0
+Crasher
+0.0 9.0 135 14.14
+Aquavit
+-2.0 -2.0 294.0 15.0</PRE>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001004000000000000000">Sample Output</A></FONT></H2>
+<P>
+<PRE>Scenario: Sample Test Data Set
+
+Boat ID                   Bearing Distance Lights (left to right)
+-----------------------------------------------------------------
+Windswept                 90.00   14.14    Lights not visible
+Footloose                 225.19  7.81     Masthead Stern
+Crasher                   45.00   9.00     Masthead Green
+Aquavit                   111.00  2.83     Stern Masthead Green
+** Collision warning --&gt; Crasher 8.50
+*****************************************************************</PRE>
+</BODY>
+</HTML>

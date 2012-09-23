@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Getting There</TITLE>
+<META NAME="description" CONTENT="Getting There">
+<META NAME="keywords" CONTENT="htmlatex">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<LINK REL=STYLESHEET HREF="htmlatex.css">
+</HEAD>
+<BODY LANG="EN" BGCOLOR=#FFFFFF>
+<CENTER>
+<H5>ACM International Collegiate
+Programming Contest Finals 1989</H5>
+<P>
+<P>
+<H1>Problem F</H1>
+</CENTER>
+ <H1><BR CLEAR=ALL><CENTER><TABLE BGCOLOR=#0060F0><TR><TD><B><FONT SIZE=5 COLOR=#C0FFFF>&nbsp;<A NAME="SECTION0001000000000000000000">Getting There</A></FONT>&nbsp;</B></TABLE></CENTER></H1>
+<P>
+A frustrating part of arranging your own air travel trip is
+selecting from among many possible flights that sequence
+of flights which will take you from your origin to your
+destination in the least possible time or for the least possible
+cost.
+<P>
+<P>
+It should be clear to any frequent air passenger that
+in order to reach one city from another, the cost of the shorter
+flight may be more than the cost of longer flights.
+In other words, it may pay you well to cool your heels in an
+airport waiting for a connecting flight rather than
+take a more direct flight or one in which the connecting time is
+shorter.  For example, consider the following flight schedule.
+<P>
+<PRE>            Center City     Homeville       5:2OA  6:55A  12.50
+            Center City     Greenville      5:45A  9:l5A  35.00
+            Homeville       Greenville      7:45A  9:35A  20.00</PRE>
+<P>
+In order to travel from Center City to Greenville, you
+have two choices.  You can travel from Center City to
+Homeville, then from Homeville to Greenville, or you
+can travel directly from Center City to Greenville.  The first
+route costs $32.50 and has travel time 4:15;
+the direct route costs $35.00 and has travel time 3:30.
+If minimizing cost
+is your objective, then you would choose the first route.
+If you want to minimize time, you would select the second
+route.
+<P>
+<P>
+You are to write a program to optimize route selection
+given the criteria of least cost or least time.  Your program
+will read a list of flights and several trip rcquests
+and will select from the list of flights the best sequence to satisfy
+each trip request.  For each request, if more than one
+route should satisfy the request, then your program should
+select the route that also satisfies the other
+objective.  For example, if cost is to be minimizad and if two routes both
+yield the minimum cost, then select the route which
+yields the shortest travel time.  If two routes yield identical costs
+and travel times, then select either route.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001001000000000000000">Input</A></FONT></H2>
+<P>
+The input consists of several blocks.
+First line contains number of these blocks.
+Every block is broken into two segments, the
+first describing the list of flights and the second containing the trip
+requests. The end of each segment is
+indicated by the line consisting of the single character `<TT>#</TT>'.
+<P>
+<P>
+The flight segment of the file describes individual
+flights, one per line.  Each line contains the origin city (columns 1
+through 19), the destination city (columns 21 through 39),
+the departure time (columns 41 through 46). the arrival
+time (columns 48 through 53), and the cost
+(columns 55 through 60).  City names are left-justified in their respective
+fields, and may contain upper and lower case characters and spaces.
+Times are in the form <I>HH</I>:<I>MMX</I>, where <I>HH</I> is the hour (a
+leading zero may be replaced by a blank), <I>MM</I> is the
+minutes (exactly two digits will appear), and <I>X</I> is <TT>A</TT> (for AM),
+<TT>P</TT> (for PM), or <TT>M</TT> or <TT>N</TT> 
+(this can be used only after 12:00 to distinguish
+midnight from noon). The cost of the ticket is in dollars
+and cents, and includes a decimal point and two
+fractional digits.  No tickets are free or cost more than $999.99.
+No individual flight represented by a line in the schedule takes
+more than 24 hours.  There will be at most 20 flights on the schedule.
+<P>
+<P>
+The trip request segment
+follows the list of flights.  Each request appears on a line by itself,
+and specifies the origin city (columns 1 to 19),
+the destination city (columns 21 to 39), and whether to optimize cost
+or travel time.  If it is desired to optimize
+travel time, the word <TT>TIME</TT> is in columns 41 to 44.  If cost is to be
+optimized, then the word <TT>COST</TT> is in columns 41 to 44.
+There may be trailing blanks in any line in the flight
+schedule or the trip requests.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001002000000000000000">Output</A></FONT></H2>
+<P>
+For each travel request, display the request and the optimal route
+in the form shown below.
+Notice that trailing spaces are removed from city names.
+Time is output in the form &lt;hh&gt;:&lt;mm&gt;,
+where &lt;hh&gt; goes from 0 to 23 and &lt;mm&gt;
+goes from 0 to 59.
+If the trip takes more than one day,
+the time output starts with the 
+number of days and string "day" appended (or "days"
+if the flight takes more than 48 hours).
+There are no leading zeroes nor blanks allowed.
+<P>
+<P>
+All optimum routes will
+require less than 10 days and less than $1,000.00.
+Place exactly one blank line between the outputs for successive trips.
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001003000000000000000">Sample Input</A></FONT></H2>
+<P>
+<PRE>1
+Center City      Homeville        5:2OA 6:55A     12.50
+Center City      Greenville       5:45A 9:l5A     35.00
+Homeville        Greenville       7:45A 9:35A     20.00
+Archer City      Homeville        5:OOA 6:OOP    612.50
+#
+Center City      Greenville       COST
+Archer City      Greenville       TIME
+#</PRE>
+<P>
+<H2><FONT COLOR=#0070E8><A NAME="SECTION0001004000000000000000">Sample Output</A></FONT></H2>
+<P>
+<PRE>
+Center City->Greenville,4:15,32.50
+Center City->Homeville,5:20-6:55,12.50
+Homeville->Greenville,7:45-9:35,20.00
+
+Archer City->Greenville,1 day 4:35,632.50
+Archer City->Homeville,5:00-18:00,612.50
+Homeville->Greenville,7:45-9:35,20.00
+</PRE>
+<P>
+</BODY>
+</HTML>
