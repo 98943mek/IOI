@@ -1,9 +1,0 @@
-Case 1: 50000
-Case 2: 50000
-Case 3: IMPOSSIBLE
-Case 4: 570000
-Case 5: 170000
-Case 6: 45000
-Case 7: IMPOSSIBLE
-
-
